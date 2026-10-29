@@ -1,0 +1,164 @@
+:root {
+  --bg-main: #0f0f0f;
+  --bg-card: #1a1a1a;
+  --green: #2ecc71;
+  --text-main: #ffffff;
+  --text-muted: #bfbfbf;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  padding: 16px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: var(--green);
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* =========================
+   CATEGORIES (MOBILE-FIRST)
+   ========================= */
+
+.categories {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 6px 2px 12px;
+  margin-bottom: 20px;
+
+  scrollbar-width: none; /* Firefox */
+}
+
+.categories::-webkit-scrollbar {
+  display: none; /* Chrome / Safari */
+}
+
+.category {
+  flex: 0 0 auto;              /* 🔑 важно */
+  background: transparent;
+  border: 1px solid var(--green);
+  color: var(--green);
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;         /* 🔑 да не се чупят на редове */
+}
+
+.category.active {
+  background: var(--green);
+  color: #000;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* CARD */
+.card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+}
+
+.card img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
+}
+
+.card-content h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.card-content p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.price {
+  color: var(--green);
+  font-weight: 600;
+}
+
+/* Заглавия на групи шотове */
+.shot-group-title, .hot-drink-group-title {
+  color: #2ecc71;
+  
+}
+
+/*дропдаун за вкусове*/
+.flavour-wrapper {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.flavour-label {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.flavour-select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #2ecc71;
+  font-size: 14px;
+  color:#2ecc71;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+}
+
+.flavour-select:hover {
+  border-color: #999;
+  
+}
+
+.flavour-select:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+  color:#1a1a1a;
+  background-color: #2ecc71;
+}
+
+.flavour-select option {
+  background-color: #1a1a1a;
+  color: #2ecc71;
+}
+

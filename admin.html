@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_admin.css">
+</head>
+<body>
+
+  <section id="login-section">
+    <h2>Admin Login</h2>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button id="login-btn">Login</button>
+  </section>
+
+  <section id="admin-section" style="display:none;">
+    <h2>Add Menu Item</h2>
+
+    <input type="text" id="name" placeholder="Name">
+    <input type="text" id="description" placeholder="Description">
+    <input type="text" id="price" placeholder="Price">
+    <input type="text" id="image" placeholder="Image URL">
+
+    <select id="category">
+      <option value="cocktails">Cocktails</option>
+      <option value="hot-drinks">Hot drinks</option>
+      <option value="cold-drinks">Cold drinks</option>
+      <option value="alcohol">Alcohol</option>
+      <option value="shots">Shots</option>
+      <option value="snacks">Snacks</option>
+    </select>
+
+    <!-- 🟢 NEW: Shot type -->
+    <div id="typeWrapper" style="display:none;">
+      <select id="type">
+        <option value="">Select type</option>
+        <option value="alcoholic">Single shot</option>
+        <option value="non-alcoholic">Shaker shot</option>
+      </select>
+    </div>
+
+    <input id="flavours" placeholder="Strawberry, Mango, Vanilla... (optional)">
+
+
+    <button id="add-btn">Add Item</button>
+  </section>
+
+  <section id="product-list-section" style="display:none;">
+    <h2>Current Menu Items</h2>
+    <input type="text" id="search-input" placeholder="Search by name..." />
+    <table id="product-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Flavours</th>
+          <th>Type</th>
+          <th>Available</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
